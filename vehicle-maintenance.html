@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Maintenance Service - Wiyule Motors</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-16 w-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVbOHrYXKB55eoDs80oh_qeIFhGlcupYTQg&s" alt="Wiyule Motors Logo">
+                        <span class="ml-2 text-xl font-bold text-gray-900">Wiyule Motors</span>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="index.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Header -->
+    <div class="bg-red-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <i data-feather="settings" class="h-16 w-16 mx-auto mb-4"></i>
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Vehicle Maintenance Service</h1>
+            <p class="mt-4 text-xl max-w-2xl mx-auto">Regular maintenance to keep your vehicle running smoothly and prevent costly repairs down the road.</p>
+        </div>
+    </div>
+
+    <!-- Service Form -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="px-6 py-8 sm:p-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Book Your Vehicle Maintenance</h2>
+                    <form id="maintenanceForm" class="space-y-6">
+
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="vehicleMake" class="block text-sm font-medium text-gray-700">Vehicle Make</label>
+                                <input type="text" id="vehicleMake" name="vehicleMake" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500" placeholder="e.g., Toyota, Ford, BMW">
+                            </div>
+                            <div>
+                                <label for="vehicleModel" class="block text-sm font-medium text-gray-700">Vehicle Model</label>
+                                <input type="text" id="vehicleModel" name="vehicleModel" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500" placeholder="e.g., Camry, F-150, X5">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="vehicleYear" class="block text-sm font-medium text-gray-700">Vehicle Year</label>
+                                <input type="number" id="vehicleYear" name="vehicleYear" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500" placeholder="e.g., 2020">
+                            </div>
+                            <div>
+                                <label for="vehicleType" class="block text-sm font-medium text-gray-700">Vehicle Type</label>
+                                <select id="vehicleType" name="vehicleType" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                                    <option value="">Select Vehicle Type</option>
+                                    <option value="sedan">Sedan</option>
+                                    <option value="suv">SUV</option>
+                                    <option value="truck">Truck</option>
+                                    <option value="van">Van</option>
+                                    <option value="coupe">Coupe</option>
+                                    <option value="hatchback">Hatchback</option>
+                                    <option value="convertible">Convertible</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="vin" class="block text-sm font-medium text-gray-700">VIN (Vehicle Identification Number)</label>
+                            <input type="text" id="vin" name="vin" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500" placeholder="Optional">
+                        </div>
+
+                        <div>
+                            <label for="currentMileage" class="block text-sm font-medium text-gray-700">Current Mileage</label>
+                            <input type="number" id="currentMileage" name="currentMileage" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500" placeholder="e.g., 45000">
+                        </div>
+
+                        <div>
+                            <label for="maintenanceType" class="block text-sm font-medium text-gray-700">Type of Maintenance Needed</label>
+                            <select id="maintenanceType" name="maintenanceType" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                                <option value="">Select Maintenance Type</option>
+                                <option value = "Spray Painting">Spray Painting</option>
+                                <option value="Panel Beating">Panel Beating</option>
+                                <option value="Wrapping & Tinting">Wrapping & Tinting</option>
+                                <option value="Suspension Service">Suspension Service</option>
+                                <option value="Oil Change">Oil Change</option>
+                                <option value="Brake Service">Brake Service</option>
+                                <option value="Full Service">Full Service</option>
+                                
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="preferredDate" class="block text-sm font-medium text-gray-700">Preferred Service Date</label>
+                            <input type="date" id="preferredDate" name="preferredDate" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                        </div>
+
+                        <div>
+                            <label for="additionalNotes" class="block text-sm font-medium text-gray-700">Additional Notes or Specific Issues</label>
+                            <textarea id="additionalNotes" name="additionalNotes" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500" placeholder="Describe any specific issues or concerns..."></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" 
+        class="w-full max-w-xs py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+        Book Maintenance Service
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   <script>
+        // Initialize feather icons and AOS
+        feather.replace();
+        AOS.init();
+
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('preferredDate').min = today;
+
+        // ⚠️ REPLACE THESE THREE VALUES WITH YOUR ACTUAL EMAILJS CREDENTIALS ⚠️
+        const YOUR_PUBLIC_KEY = "_MsHHPzVaPGWmLrkT";      // Replace with your Public Key
+        const YOUR_SERVICE_ID = "service_h7ymzcc";      // Replace with your Service ID  
+        const YOUR_TEMPLATE_ID = "template_oqbx6i2";    // Replace with your Template ID
+
+        // Initialize EmailJS with your Public Key
+        (function() {
+            emailjs.init(YOUR_PUBLIC_KEY);
+        })();
+
+        // Form submission handler
+        const form = document.getElementById('maintenanceForm');
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById('maintenanceForm');
+
+    if (!form) {
+        console.error("❌ Form not found: maintenanceForm");
+        return;
+    }
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const button = form.querySelector('button[type="submit"]');
+        const originalText = button.textContent;
+
+        button.textContent = 'Sending...';
+        button.disabled = true;
+
+        const templateParams = {
+            firstName: form.firstName.value,
+            lastName: form.lastName.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            vehicleMake: form.vehicleMake.value,
+            vehicleModel: form.vehicleModel.value,
+            vehicleYear: form.vehicleYear.value,
+            vehicleType: form.vehicleType.value,
+            vin: form.vin.value || 'N/A',
+            currentMileage: form.currentMileage.value,
+            maintenanceType: form.maintenanceType.value,
+            preferredDate: form.preferredDate.value,
+            additionalNotes: form.additionalNotes.value || 'None'
+        };
+
+        emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams)
+            .then(function() {
+                window.location.href = 'booking-thank-you.html';
+            }, function(error) {
+                alert('❌ Email failed: ' + error.text);
+                button.textContent = originalText;
+                button.disabled = false;
+            });
+
+    });
+});
+    </script>
+</body>
+</html>     

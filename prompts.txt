@@ -1,0 +1,3 @@
+from the image i just uploaded, use that for the background image instead 
+now make a loading page for the view all parts section that will send customers onto a page to select categories of car parts 
+make the "view all parts" button take me to the parts.html landing page when clicked 

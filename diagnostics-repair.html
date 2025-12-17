@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostics & Repair Service - Wiyule Motors</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-16 w-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVbOHrYXKB55eoDs80oh_qeIFhGlcupYTQg&s" alt="Wiyule Motors Logo">
+                        <span class="ml-2 text-xl font-bold text-gray-900">Wiyule Motors</span>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="index.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Header -->
+    <div class="bg-red-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <i data-feather="tool" class="h-16 w-16 mx-auto mb-4"></i>
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Diagnostics & Repair Service</h1>
+            <p class="mt-4 text-xl max-w-2xl mx-auto">Advanced diagnostics to identify issues and expert repairs to get you back on the road quickly.</p>
+        </div>
+    </div>
+
+    <!-- Service Form -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="px-6 py-8 sm:p-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Book Your Diagnostics & Repair</h2>
+                    <form id="diagnosticsForm" class="space-y-6">
+                        <!-- Name Fields -->
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                            </div>
+                        </div>
+
+                        <!-- Contact Fields -->
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                            </div>
+                        </div>
+
+                        <!-- Vehicle Info -->
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="carType" class="block text-sm font-medium text-gray-700">Type of Car</label>
+                                <select id="carType" name="carType" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                                    <option value="" disabled selected>Select your car type</option>
+                                    <option value="sedan">Sedan</option>
+                                    <option value="suv">SUV</option>
+                                    <option value="truck">Truck</option>
+                                    <option value="van">Van</option>
+                                    <option value="sports">Sports Car</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="makeModel" class="block text-sm font-medium text-gray-700">Vehicle Make and Model</label>
+                                <input type="text" id="makeModel" name="makeModel" placeholder="e.g., Toyota Camry" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="vehicleYear" class="block text-sm font-medium text-gray-700">Vehicle Year</label>
+                                <input type="number" id="vehicleYear" name="vehicleYear" placeholder="e.g., 2020" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                            </div>
+                            <div>
+                                <label for="mileage" class="block text-sm font-medium text-gray-700">Mileage (in miles or km)</label>
+                                <input type="number" id="mileage" name="mileage" placeholder="e.g., 50000" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                            </div>
+                        </div>
+
+                        <!-- Service Scheduling -->
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="serviceDate" class="block text-sm font-medium text-gray-700">Service Date</label>
+                                <input type="date" id="serviceDate" name="serviceDate" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                            </div>
+                            <div>
+                                <label for="timeSlot" class="block text-sm font-medium text-gray-700">Preferred Time Slot</label>
+                                <select id="timeSlot" name="timeSlot" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                                    <option value="" disabled selected>Select a time slot</option>
+                                    <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                                    <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+                                    <option value="evening">Evening (4:00 PM - 8:00 PM)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Issue Description & Service Type -->
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="issueDescription" class="block text-sm font-medium text-gray-700">Issue Description</label>
+                                <textarea id="issueDescription" name="issueDescription" rows="4" placeholder="e.g., Check engine light on, strange noise from engine, etc." required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"></textarea>
+                            </div>
+                            <div>
+                                <label for="serviceType" class="block text-sm font-medium text-gray-700">Service Type</label>
+                                <select id="serviceType" name="serviceType" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                                    <option value="" disabled selected>Select service type</option>
+                                    <option value="diagnostics">Diagnostics Only</option>
+                                    <option value="diagnostics-repair">Diagnostics + Repair</option>
+                                    <option value="repair">Repair Only</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Urgency & Contact -->
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="urgencyLevel" class="block text-sm font-medium text-gray-700">Urgency Level</label>
+                                <select id="urgencyLevel" name="urgencyLevel" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                                    <option value="" disabled selected>Select urgency level</option>
+                                    <option value="urgent">Urgent (Within 24-48 hours)</option>
+                                    <option value="standard">Standard (Within 1 week)</option>
+                                    <option value="flexible">Flexible (Anytime)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="contactMethod" class="block text-sm font-medium text-gray-700">Preferred Contact Method</label>
+                                <select id="contactMethod" name="contactMethod" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500">
+                                    <option value="" disabled selected>Select contact method</option>
+                                    <option value="email">Email</option>
+                                    <option value="phone">Phone</option>
+                                    <option value="both">Both</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="mt-6"> 
+                            <button type="button" onclick="submitDiagnosticsForm()" class="w-full max-w-xs py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                                Book Diagnostics Service
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        AOS.init();
+        feather.replace();
+
+       // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('preferredDate').min = today;
+
+        // ⚠️ REPLACE THESE THREE VALUES WITH YOUR ACTUAL EMAILJS CREDENTIALS ⚠️
+        const YOUR_PUBLIC_KEY = "_MsHHPzVaPGWmLrkT";      // Replace with your Public Key
+        const YOUR_SERVICE_ID = "service_h7ymzcc";      // Replace with your Service ID  
+        const YOUR_TEMPLATE_ID = "template_oqbx6i2";    // Replace with your Template ID
+
+        // Initialize EmailJS with your Public Key
+        (function() {
+            emailjs.init(YOUR_PUBLIC_KEY);
+        })();
+
+        // Form submission handler
+        const form = document.getElementById('maintenanceForm');
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById('maintenanceForm');
+
+    if (!form) {
+        console.error("❌ Form not found: maintenanceForm");
+        return;
+    }
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const button = form.querySelector('button[type="submit"]');
+        const originalText = button.textContent;
+
+        button.textContent = 'Sending...';
+        button.disabled = true;
+
+        const templateParams = {
+            firstName: form.firstName.value,
+            lastName: form.lastName.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            vehicleMake: form.vehicleMake.value,
+            vehicleModel: form.vehicleModel.value,
+            vehicleYear: form.vehicleYear.value,
+            vehicleType: form.vehicleType.value,
+            vin: form.vin.value || 'N/A',
+            currentMileage: form.currentMileage.value,
+            maintenanceType: form.maintenanceType.value,
+            preferredDate: form.preferredDate.value,
+            additionalNotes: form.additionalNotes.value || 'None'
+        };
+
+        emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams)
+            .then(function() {
+                window.location.href = 'booking-thank-you.html';
+            }, function(error) {
+                alert('❌ Email failed: ' + error.text);
+                button.textContent = originalText;
+                button.disabled = false;
+            });
+
+    });
+});
+    </script>
+</body>
+</html>

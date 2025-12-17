@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiyule Motors - All Parts</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .loading-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid #dc2626;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-16 w-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVbOHrYXKB55eoDs80oh_qeIFhGlcupYTQg&s" alt="Wiyule Motors Logo">
+                        <span class="ml-2 text-xl font-bold text-gray-900">Wiyule Motors</span>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="index.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center">
+        <div class="loading-spinner mb-4"></div>
+        <h2 class="text-xl font-semibold text-gray-800">Loading Parts Catalog</h2>
+        <p class="text-gray-600 mt-2">Please wait while we prepare your shopping experience...</p>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl font-extrabold text-red-500 sm:text-4xl">Browse Parts by Category</h1>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-white">Select a category to view our premium automotive parts!</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Engine Parts -->
+                <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 bg-gray-100 overflow-hidden">
+                        <img src="https://i.pinimg.com/1200x/dc/0d/52/dc0d523553abdab81b5fa8afbac7c6bb.jpg" alt="Engine Parts" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Engine Components</h3>
+                        <p class="mt-2 text-gray-600">High-performance engine parts and accessories</p>
+                        <div class="mt-4 flex items-center text-red-600">
+                            <span>View Products</span>
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Brake Systems -->
+                <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 bg-gray-100 overflow-hidden">
+                        <img src="https://i.pinimg.com/1200x/3d/e3/10/3de3106ff64432831c81ffcc6ec7a0b4.jpg" alt="Brake Systems" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Brake Systems</h3>
+                        <p class="mt-2 text-gray-600">Quality brake components for all vehicles</p>
+                        <div class="mt-4 flex items-center text-red-600">
+                            <span>View Products</span>
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Suspension -->
+                <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 bg-gray-100 overflow-hidden">
+                        <img src="https://i.pinimg.com/1200x/70/21/46/702146d0dd37b37d9fd9263cf964ec4e.jpg" alt="Suspension Parts" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Suspension</h3>
+                        <p class="mt-2 text-gray-600">Shocks, struts, and suspension components</p>
+                        <div class="mt-4 flex items-center text-red-600">
+                            <span>View Products</span>
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Electrical -->
+                <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 bg-gray-100 overflow-hidden">
+                        <img src="https://as2.ftcdn.net/v2/jpg/03/77/91/35/1000_F_377913574_W09Bxp6niAlo0ySHFJ7ippw5VeMgpdqC.jpg" alt="Electrical Parts" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Electrical</h3>
+                        <p class="mt-2 text-gray-600">Batteries, alternators, and wiring</p>
+                        <div class="mt-4 flex items-center text-red-600">
+                            <span>View Products</span>
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Exhaust -->
+                <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 bg-gray-100 overflow-hidden">
+                        <img src="https://i.pinimg.com/1200x/88/2f/2c/882f2cc0a27ec9ccc4ed6819081c6c6b.jpg" alt="Exhaust Systems" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Exhaust Systems</h3>
+                        <p class="mt-2 text-gray-600">Mufflers, pipes, and performance exhaust</p>
+                        <div class="mt-4 flex items-center text-red-600">
+                            <span>View Products</span>
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cooling -->
+                <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 bg-gray-100 overflow-hidden">
+                        <img src="https://as2.ftcdn.net/v2/jpg/16/06/12/83/1000_F_1606128353_VPdd0NGOrkVj21ChDmMNt8GwlmmqwBh7.jpg" alt="Cooling Systems" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Cooling Systems</h3>
+                        <p class="mt-2 text-gray-600">Radiators, fans, and cooling components</p>
+                        <div class="mt-4 flex items-center text-red-600">
+                            <span>View Products</span>
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize feather icons
+            feather.replace();
+            
+            // Simulate loading time (3 seconds)
+            setTimeout(function() {
+                document.getElementById('loading-screen').classList.add('hidden');
+                document.getElementById('main-content').classList.remove('hidden');
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true
+                });
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
